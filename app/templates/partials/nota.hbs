@@ -21,11 +21,13 @@
 
   {{else}}
 
+    <a {{action cancel}} class="button alert right">Cancelar</a>
     {{#if title}}
       <a {{action create}} class="button right">Crear "{{title}}"</a>
     {{else}}
       <a {{action create}} class="button right">Crear</a>
     {{/if}}
+
 
   {{/if}}
 </div>

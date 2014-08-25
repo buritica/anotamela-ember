@@ -5,19 +5,15 @@ export default Ember.ObjectController.extend({
     create: function() {
       var nota = this.get('model');
       nota.save();
-      return false;
+      this.transitionToRoute('notas');
     },
-    update: function () {
-      var nota = this.get('model');
-      nota.save();
-    },
-    delete: function () {
+    cancel: function() {
       var nota = this.get('model');
       nota.deleteRecord();
-      nota.save();
+      this.transitionToRoute('notas');
     }
   },
-   aceInit: function(editor) {
+  aceInit: function(editor) {
     editor.setHighlightActiveLine(false);
     editor.setShowPrintMargin(false);
     editor.getSession().setTabSize(2);

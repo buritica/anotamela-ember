@@ -2,15 +2,17 @@
   <nav id="main-top-bar" class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1>{{#link-to 'index'}}Anótame.la{{/link-to}}</h1>
+        <h1>{{#link-to 'notas'}}Anótame.la{{/link-to}}</h1>
       </li>
     </ul>
    <section class="top-bar-section">
       <!-- Left Nav Section -->
       <ul class="right">
-        <li>{{#link-to 'nueva'}}Nota Nueva{{/link-to}}</li>
+        <li>{{#link-to 'notas.nueva'}}Nota Nueva{{/link-to}}</li>
       </ul>
     </section>
   </nav>
 </div>
-{{outlet}}
+<div class="row">
+  {{outlet}}
+</div>

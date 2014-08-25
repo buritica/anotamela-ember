@@ -1,0 +1,27 @@
+<div id="notas">
+  <h1>Mis Notas</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th width="200">Titulo</th>
+        <th>Descripción</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each}}
+        <tr>
+          <td>{{title}}</td>
+          <td>{{description}}</td>
+          <td>
+            <a {{action delete this}} class="button tiny alert right">Borrar</a>
+            {{#link-to 'nota' id class="button tiny right"}}Editar{{/link-to}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+
+</div>
