@@ -1,0 +1,31 @@
+<div id="nota">
+
+  {{#if title}}
+    <h1>{{title}}</h1>
+  {{else}}
+    <h1>Nota</h1>
+  {{/if}}
+
+  {{input value=title placeholder="titulo"}}
+  {{input value=description placeholder="descripción"}}
+  {{!-- {{textarea value=body placeholder="descripción"}} --}}
+
+  <div>
+    {{ace-editor value=body aceInit=aceInit class="editor"}}
+  </div>
+
+  {{#if id}}
+
+    <a {{action delete}} class="button alert right">Borrar</a>
+    <a {{action update}} class="button right">Actualizar</a>
+
+  {{else}}
+
+    {{#if title}}
+      <a {{action create}} class="button right">Crear "{{title}}"</a>
+    {{else}}
+      <a {{action create}} class="button right">Crear</a>
+    {{/if}}
+
+  {{/if}}
+</div>

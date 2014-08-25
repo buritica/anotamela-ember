@@ -2,9 +2,19 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   actions: {
-    submit: function() {
-      console.log('submit');
+    create: function() {
+      var nota = this.get('model');
+      nota.save();
       return false;
+    },
+    update: function () {
+      var nota = this.get('model');
+      nota.save();
+    },
+    delete: function () {
+      var nota = this.get('model');
+      nota.deleteRecord();
+      nota.save();
     }
   },
    aceInit: function(editor) {

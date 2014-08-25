@@ -1,16 +1,5 @@
 <div id="nota-nueva" class="row">
   <form class="large-6 large-offset-3 column">
-    {{#if title}}
-      <h1>{{title}}</h1>
-    {{else}}
-      <h1>Nota Nueva</h1>
-    {{/if}}
-    {{input value=title placeholder="titulo"}}
-    {{input value=description placeholder="descripción"}}
-    {{!-- {{textarea value=body placeholder="descripción"}} --}}
-    <div>
-      {{ace-editor value=body aceInit=aceInit class="editor"}}
-    </div>
-    <a {{action submit}} class="button right">Crear {{title}}</a>
+    {{partial "partials/nota"}}
   </form>
 </div>

@@ -9,8 +9,8 @@ var Inflector = require('ember-inflector-node-shim'),
 
 // NAMES
 var namespace = '/api/',
-    modelname = 'notas',
-    resourcename = Inflector.pluralize(modelname);
+    modelname = 'nota',
+    resourcename = 'notas';
 
 
 module.exports = function(app) {
